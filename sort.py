@@ -51,6 +51,7 @@ def normalize(file: Path) -> Path :
     new_file_name = ''.join(ch if ch.isalpha() or ch.isdigit() else '_' for ch in trans_file)
     return Path(str(file).removesuffix(file.name)) / (new_file_name + file.suffix) # returns normalized path
 
+
 def replace_file(file: Path) -> None:
     '''Distribute files to relative categories.'''
 
